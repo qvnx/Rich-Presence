@@ -12,6 +12,4 @@ An open-source Rich Presence project designed just for making making a Rich Pres
 - Add buttons to your profile
 
 ## SOONTM
-#### [Installation]
-#### [Basic Usage]
-#### [Customization]
+#### [Installation & Customization]
