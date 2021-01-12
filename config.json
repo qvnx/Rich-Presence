@@ -1,0 +1,15 @@
+{
+   "clientID": "clientID",
+   "details": "appDESCRIPTION",
+
+   "image": [
+      "imageNAME", "imageTEXT"
+   ],
+   
+   "button1": [
+      "buttonTEXT", "buttonLINK"
+   ],
+   "button2": [
+      "buttonTEXT", "buttonLINK"
+   ]
+}
