@@ -5,11 +5,14 @@ An open-source Rich Presence project designed just for making making a Rich Pres
 <img src="https://ur.red-panda.red/JVIRc4MN4.png" width="400px" align="right">
 
 ### Features
-- Choose a custom app title
-- Choose a custom app description
-- Choose a custom app image
-	- Tooltips
-- Add buttons to your profile
+- Get a suuuper snazzy rich presence for your profile
+	- Choose your very own app name
+	- Write a snazzy description
+	- Upload custom images
+		- Tooltip customization as well
+	- Add buttons to your profile
+		- Allowation of `2` buttons + webpage redirects
+	- (More coming soon!)
 
 ## Other Links
 ### [Installation](https://github.com/xQynx/Rich-Presence/wiki/Installation)
