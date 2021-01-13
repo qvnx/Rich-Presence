@@ -11,5 +11,5 @@ An open-source Rich Presence project designed just for making making a Rich Pres
 	- Tooltips
 - Add buttons to your profile
 
-## SOONTM
-#### [Installation & Customization]
+## Other Links
+### [Installation](https://github.com/xQynx/Rich-Presence/wiki/Installation)
