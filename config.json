@@ -9,12 +9,12 @@
    "smallImage": {
       "text": "smallImageTEXT",
       "image": "smallImageIMAGE"
-   }
+   },
    
    "button1": {
       "text": "buttonTEXT",
       "link": "buttonLINK"
-   }
+   },
    "button2": {
       "text": "buttonTEXT",
       "link": "buttonLINK"
