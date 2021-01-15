@@ -1,15 +1,22 @@
 {
-   "clientID": "clientID",
-   "details": "appDESCRIPTION",
+   "clientID": "ClientID",
+   "details": "ClientDESCRIPTION",
 
-   "image": [
-      "imageNAME", "imageTEXT"
-   ],
+   "largeImage": {
+      "text": "BigImageText",
+      "image": "BIGImageName"
+   },
+   "smallImage": {
+      "text": "SmallImageText",
+      "image": "SMALLImageName"
+   },
    
-   "button1": [
-      "buttonTEXT", "buttonLINK"
-   ],
-   "button2": [
-      "buttonTEXT", "buttonLINK"
-   ]
+   "button1": {
+      "text": "Button1Text",
+      "link": "https://example.com"
+   },
+   "button2": {
+      "text": "Button2Text",
+      "link": "https://example.com"
+   }
 }

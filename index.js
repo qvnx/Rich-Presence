@@ -9,7 +9,7 @@ const spacer = `   `;
 console.log("Starting up ..");
 
 console.log(spacer + "Gathering Login ..");
-client.login({clientId: config.clientID}).catch(console.error);
+client.login({ clientId: config.clientID }).catch(console.error);
 console.log(spacer + spacer + "Logged in!");
 
 console.log(spacer + "Client ..");
@@ -21,11 +21,14 @@ client.on('ready', () => {
       activity: {
          details: config.details,
          assets: {
-            large_image: config.image[0],
-            large_text: config.image[1]
+            large_image: config.largeImage.image,
+            large_text: config.largeImage.text,
+            small_image: config.smallImage.image,
+            small_text: config.smallImage.text,
          },
          buttons: [
-            {label: config.button1[0], url: config.button1[1]}, {label: config.button2[0], url: config.button2[1]}
+            { label: config.button1.text, url: config.button1.link },
+            { label: config.button2.text, url: config.button2.link }
          ]
       }
    })
