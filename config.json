@@ -1,23 +1,23 @@
 {
-   "clientID": "ClientID",
-   "details": "ClientDESCRIPTION",
-   "state": "ClientSTATE",
-
-   "largeImage": {
-      "text": "BigImageText",
-      "image": "BIGImageName"
-   },
-   "smallImage": {
-      "text": "SmallImageText",
-      "image": "SMALLImageName"
-   },
-   
-   "button1": {
-      "text": "Button1Text",
-      "link": "https://example.com"
-   },
-   "button2": {
-      "text": "Button2Text",
-      "link": "https://example.com"
-   }
-}
+    "clientID": "ClientID",
+    "details": "ClientDESCRIPTION",
+    "state": "ClientSTATE",
+ 
+    "largeImage": {
+       "text": "BigImageText",
+       "image": "BIGImageName"
+    },
+    "smallImage": {
+       "text": "SmallImageText",
+       "image": "SMALLImageName"
+    },
+    
+    "button1": {
+       "text": "Button1Text",
+       "link": "https://example.com"
+    },
+    "button2": {
+       "text": "Button2Text",
+       "link": "https://example.com"
+    }
+ }
