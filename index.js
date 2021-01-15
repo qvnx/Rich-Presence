@@ -1,15 +1,18 @@
 // Imports
 const rpc = require(`discord-rpc`);
 const config = require(`./config.json`);
-const client = new rpc.Client({transport: 'ipc'})
+const client = new rpc.Client({
+   transport: 'ipc'
+})
 
 // Presets
 const spacer = `   `;
 
 console.log("Starting up ..");
-
 console.log(spacer + "Gathering Login ..");
-client.login({ clientId: config.clientID }).catch(console.error);
+client.login({
+   clientId: config.clientID
+}).catch(console.error);
 console.log(spacer + spacer + "Logged in!");
 
 console.log(spacer + "Client ..");
@@ -27,9 +30,14 @@ client.on('ready', () => {
             small_image: config.smallImage.image,
             small_text: config.smallImage.text,
          },
-         buttons: [
-            { label: config.button1.text, url: config.button1.link },
-            { label: config.button2.text, url: config.button2.link }
+         buttons: [{
+               label: config.button1.text,
+               url: config.button1.link
+            },
+            {
+               label: config.button2.text,
+               url: config.button2.link
+            }
          ]
       }
    })
