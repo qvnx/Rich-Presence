@@ -20,6 +20,7 @@ client.on('ready', () => {
       pid: process.pid,
       activity: {
          details: config.details,
+         state: config.state,
          assets: {
             large_image: config.largeImage.image,
             large_text: config.largeImage.text,

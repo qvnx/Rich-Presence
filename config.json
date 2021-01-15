@@ -1,6 +1,7 @@
 {
    "clientID": "ClientID",
    "details": "ClientDESCRIPTION",
+   "state": "ClientSTATE",
 
    "largeImage": {
       "text": "BigImageText",
