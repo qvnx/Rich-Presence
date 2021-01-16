@@ -1,6 +1,6 @@
 // Imports
-const rpc = require(`discord-rpc`);
-const config = require(`./config.json`);
+const rpc = require('discord-rpc');
+const config = require('./config.json');
 const client = new rpc.Client({
    transport: 'ipc'
 })
