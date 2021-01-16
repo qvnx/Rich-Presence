@@ -5,9 +5,10 @@ const client = new rpc.Client({
    transport: 'ipc'
 })
 
-// Presets
+// Console Presets
 const spacer = `   `;
 
+// Startup Output
 console.log("Starting up ..");
 console.log(spacer + "Gathering Login ..");
 client.login({
@@ -16,6 +17,7 @@ client.login({
 console.log(spacer + spacer + "Logged in!");
 
 console.log(spacer + "Client ..");
+// On-ready Function
 client.on('ready', () => {
    console.log(spacer + spacer + "Ready");
    console.log(spacer + "Presence ..");
@@ -44,6 +46,11 @@ client.on('ready', () => {
    console.log(spacer + spacer + "*  Loaded [/presence]");
    console.log(spacer + spacer + "*  Loaded [/assets]");
    console.log(spacer + spacer + "*  Loaded [/interaction]");
+	console.log(spacer + spacer + "*  Loaded [/presence]"); // Presence
+	console.log(spacer + spacer + "*  Loaded [/assets]"); // Assets
+	console.log(spacer + spacer + "*  Loaded [/short-description]"); // Details
+	console.log(spacer + spacer + "*  Loaded [/short-state]"); // State
+   console.log(spacer + spacer + "*  Loaded [/buttons]"); // Buttons
    console.log(spacer + spacer + "Presence Ready");
    console.log(spacer);
    console.log(spacer);
@@ -51,3 +58,5 @@ client.on('ready', () => {
    console.log(spacer);
    console.log(spacer);
 });
+// Starts up the presence
+).catch(console.error); // Catches any errors and outputs them
