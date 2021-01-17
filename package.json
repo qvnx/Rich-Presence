@@ -4,11 +4,22 @@
   "description": "Discord RPC",
   "main": "index.js",
   "dependencies": {
-    "discord-rpc": "git+https://github.com/djs/discord-rpc.git"
+    "discord-rpc": "git+https://github.com/discordjs/RPC.git"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "node_modules/**/*",
+      "src/**/*",
+      "config.json"
+    ],
+    "targets": [
+      "node10-win-x64"
+    ]
   },
   "author": "xZyn",
   "license": "ISC"
