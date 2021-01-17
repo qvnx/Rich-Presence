@@ -1,22 +1,24 @@
 {
    "clientID": "clientID",
-   "details": "appDESCRIPTION",
+   "description": "shortDescription",
+   "state": "shortState",
+   "buttons": "true or false",
 
    "largeImage": {
-      "text": "largeImageTEXT",
-      "image": "largeImageIMAGE"
+      "tooltip": "aTooltip",
+      "image": "anImageName"
    },
    "smallImage": {
-      "text": "smallImageTEXT",
-      "image": "smallImageIMAGE"
+      "tooltip": "aTooltip",
+      "image": "anImageName"
    },
-   
+
    "button1": {
-      "text": "buttonTEXT",
-      "link": "buttonLINK"
+      "text": "buttonText",
+      "redirect": "https://a.real-link.xyz"
    },
    "button2": {
-      "text": "buttonTEXT",
-      "link": "buttonLINK"
+      "text": "buttonText",
+      "redirect": "https://a.real-link.xyz"
    }
 }
