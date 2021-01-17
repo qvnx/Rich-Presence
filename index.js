@@ -19,10 +19,6 @@ if (config.buttons == 'false') {
 
 // External Stuff
 time = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-var timestart = {
-	time: 1507665886,
-}
-
 
 // Startup Output
 console.log("Starting up ..");
