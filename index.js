@@ -23,7 +23,6 @@ Timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
 // Startup Output
 console.log("Starting up ..");
 console.log(spacer + "Gathering Login & Authentication ..");
-console.log(Buttons.toString());
 
 // On-ready Function
 client.on('ready', () => {
@@ -72,8 +71,7 @@ client.on('ready', () => {
 				],
 			},
 		});
-	}
-	else {
+	} else {
 		console.log(spacer + spacer + "*  Please provide valid Arguments for Buttons e.g enabled or disabled");
 	}
 	console.log(spacer + spacer + "*  Loaded [/presence]"); // Presence
