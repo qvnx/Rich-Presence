@@ -18,7 +18,11 @@ if (config.buttons == 'false') {
 }
 
 // External Stuff
-Timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+time = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+var timestart = {
+	time: 1507665886,
+}
+
 
 // Startup Output
 console.log("Starting up ..");
@@ -53,6 +57,9 @@ client.on('ready', () => {
 				// Client Config
 				details: config.description,
 				state: config.state,
+				timestamps: {
+					start: Date.now() + 5 * 60,
+				},
 				assets: {
 					large_image: config.largeImage.image,
 					large_text: config.largeImage.tooltip,
@@ -80,7 +87,7 @@ client.on('ready', () => {
 	console.log(spacer + spacer + "*  Loaded [/short-state]"); // State
 	console.log(spacer + spacer + "*  Loaded [/buttons]"); // Buttons
 	console.log(spacer + spacer + "Presence Ready");
-	console.log(spacer + "*  Running since " + Timestamp); // Show when Started Program
+	console.log(spacer + "*  Running since " + time); // Show when Started Program
 });
 
 // Starts up the presence
