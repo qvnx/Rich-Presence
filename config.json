@@ -1,24 +1,25 @@
 {
-   "clientID": "clientID",
-   "description": "shortDescription",
-   "state": "shortState",
-   "buttons": "true or false",
+   "ClientID": "CopiedID",
+   "Description": "ShortDescription",
+   "State": "ShortState",
+   "Buttons?": "Disable",
+   "TimeElapsed?": "Disable",
 
-   "largeImage": {
-      "tooltip": "aTooltip",
-      "image": "anImageName"
+   "LargeImage": {
+      "Tooltip": "A Tooltip!",
+      "Asset": "AssetName"
    },
-   "smallImage": {
-      "tooltip": "aTooltip",
-      "image": "anImageName"
+   "SmallImage": {
+      "Tooltip": "Another Tooltip!",
+      "Asset": "AssetName"
    },
 
-   "button1": {
-      "text": "buttonText",
-      "redirect": "https://a.real-link.xyz"
+   "Button1": {
+      "Text": "Empty Text!",
+      "Redirect": "https://a.real-link.xyz"
    },
-   "button2": {
-      "text": "buttonText",
-      "redirect": "https://a.real-link.xyz"
+   "Button2": {
+      "Text": "Empty Text!",
+      "Redirect": "https://a.real-link.xyz"
    }
 }
