@@ -10,11 +10,18 @@ const spacer = `   `;
 
 // Enabled / Disabled
 
-Buttons = Boolean(config.buttons);
-if (config.buttons == 'false') {
+Buttons = Boolean(config['Buttons?']);
+if (config['Buttons?'] == 'Disable') {
 	var x = 0
-} else if (config.buttons == 'true') {
-	var x = 1
+} else if (config['Buttons?'] == 'Enable') {
+	var x = 1;
+}
+
+ElaspedTime = Boolean(config['TimeElapsed?']);
+if (config['TimeElapsed?'] == "Disable") {
+	var t = 0;
+} else if (config["TimeElapsed?"] == "Enable") {
+	var t = 1;
 }
 
 // External Stuff
@@ -33,50 +40,102 @@ client.on('ready', () => {
 	console.log(spacer + "Presence ..");
 
 	if (x === 0) {
-		client.clearActivity;
-		client.request("SET_ACTIVITY", {
-			pid: process.pid,
-			activity: {
-				// Client Config
-				details: config.description,
-				state: config.state,
-				assets: {
-					large_image: config.largeImage.image,
-					large_text: config.largeImage.tooltip,
-					small_image: config.smallImage.image,
-					small_text: config.smallImage.tooltip,
+		if (t === 0) {
+			client.clearActivity;
+			client.request("SET_ACTIVITY", {
+				pid: process.pid,
+				activity: {
+					// Client Config
+					details: config.Description,
+					state: config.State,
+					assets: {
+						large_image: config.LargeImage.Asset,
+						large_text: config.LargeImage.Tooltip,
+						small_image: config.SmallImage.Asset,
+						small_text: config.SmallImage.Tooltip,
+					},
 				},
-			},
-		});
+			});
+		} else if (t === 1) {
+			client.clearActivity;
+			client.request("SET_ACTIVITY", {
+				pid: process.pid,
+				activity: {
+					// Client Config
+					details: config.Description,
+					state: config.State,
+					timestamps: {
+						start: Date.now() + 5 * 60,
+					},
+					assets: {
+						large_image: config.LargeImage.Asset,
+						large_text: config.LargeImage.Tooltip,
+						small_image: config.SmallImage.Asset,
+						small_text: config.SmallImage.Tooltip,
+					},
+				},
+			});
+		}
 	} else if (x === 1) {
-		client.clearActivity;
-		client.request("SET_ACTIVITY", {
-			pid: process.pid,
-			activity: {
-				// Client Config
-				details: config.description,
-				state: config.state,
-				timestamps: {
-					start: Date.now() + 5 * 60,
-				},
-				assets: {
-					large_image: config.largeImage.image,
-					large_text: config.largeImage.tooltip,
-					small_image: config.smallImage.image,
-					small_text: config.smallImage.tooltip,
-				},
-				// Button Config
-				buttons: [{
-						label: config.button1.text,
-						url: config.button1.redirect,
+		if (t === 0) {
+			client.clearActivity;
+			client.request("SET_ACTIVITY", {
+				pid: process.pid,
+				activity: {
+					// Client Config
+					details: config.Description,
+					state: config.State,
+					assets: {
+						large_image: config.LargeImage.Asset,
+						large_text: config.LargeImage.Tooltip,
+						small_image: config.SmallImage.Asset,
+						small_text: config.SmallImage.Tooltip,
 					},
-					{
-						label: config.button2.text,
-						url: config.button2.redirect,
+					// Button Config
+					buttons: [
+						{
+							label: config.Button1.Text,
+							url: config.Button1.Redirect,
+						},
+						{
+							label: config.Button2.Text,
+							url: config.Button2.Redirect,
+						},
+					],
+				},
+			});
+		}
+		if (t === 1) {
+			client.clearActivity;
+			client.request("SET_ACTIVITY", {
+				pid: process.pid,
+				activity: {
+					// Client Config
+					details: config.Description,
+					state: config.State,
+					timestamps: {
+						start: Date.now() + 5 * 60,
 					},
-				],
-			},
-		});
+					assets: {
+						large_image: config.LargeImage.Asset,
+						large_text: config.LargeImage.Tooltip,
+						small_image: config.SmallImage.Asset,
+						small_text: config.SmallImage.Tooltip,
+					},
+					// Button Config
+					buttons: [
+						{
+							label: config.Button1.Text,
+							url: config.Button1.Redirect,
+						},
+						{
+							label: config.Button2.Text,
+							url: config.Button2.Redirect,
+						},
+					],
+				},
+			});
+		}
 	} else {
 		console.log(
 			spacer +
