@@ -1,6 +1,6 @@
 <h3 align="center"><img src="https://ur.red-panda.red/XyuGzz4-Z.svg" width="350px"></h3
 
-An open-source project designed just for making a Rich Presence beautiful, easy, and simple.
+An open-source project designed just for making a Rich Presence beautifully, easily, and simply.
 
 <img src="https://ur.red-panda.red/Ehd9BEBco" width="330px" align="right">
 
