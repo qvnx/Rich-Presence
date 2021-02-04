@@ -26,7 +26,10 @@ console.log(spacer + "Gathering Login & Authentication ..");
 
 // On-ready Function
 client.on('ready', () => {
-	console.log(spacer + spacer + "Authorized via", client.user.username + '#' + client.user.discriminator);
+	console.log(
+		spacer + spacer + "Authorized via",
+		client.user.username + "#" + client.user.discriminator
+	);
 	console.log(spacer + "Presence ..");
 
 	if (x === 0) {
@@ -75,18 +78,26 @@ client.on('ready', () => {
 			},
 		});
 	} else {
-		console.log(spacer + spacer + "*  Please provide valid Arguments for Buttons e.g enabled or disabled");
+		console.log(
+			spacer +
+				spacer +
+				"*  Invalid toggle value in config. This error appeared due to [Enable/Disable] not appearing properly under [Buttons?] / [TimeElapsed?]."
+		);
 	}
-	console.log(spacer + spacer + "*  Loaded [/presence]"); // Presence
-	console.log(spacer + spacer + "*  Loaded [/assets]"); // Assets
-	console.log(spacer + spacer + "*  Loaded [/short-description]"); // Details
-	console.log(spacer + spacer + "*  Loaded [/short-state]"); // State
-	console.log(spacer + spacer + "*  Loaded [/buttons]"); // Buttons
-	console.log(spacer + spacer + "Presence Ready");
-	console.log(spacer + "*  Running since " + time); // Show when Started Program
+	console.log(spacer + spacer + "*  Loaded [/ Dependencies]"); // Presence
+	console.log(spacer + spacer + "*  Loaded [/ Required Assets]"); // Assets
+	if (t !== 0) {
+		console.log(spacer + spacer + "*  Loaded [/ Time Elapsed]"); // Time Elapsed
+	}
+	if (x !== 0) {
+		console.log(spacer + spacer + "*  Loaded [/ Buttons]"); // Buttons
+		console.log(spacer + spacer + spacer + "^  Verified Redirects"); // Buttons
+	}
+	console.log("*  Presence Ready!");
+	console.log(spacer + "*  Running since " + `[${time}]`); // Runtime
 });
 
-// Starts up the presence
+// Starts the presence
 client.login({
-	clientId: config.clientID
-}).catch(console.error); // Catches any errors and outputs them
+	clientId: config.ClientID
+}).catch(console.error); // Error Squsher - catches errors and outputs them
